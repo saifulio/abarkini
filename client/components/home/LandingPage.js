@@ -4,6 +4,8 @@ import Navigation from './Navigation';
 import HomePageSlider from './HomePageSlider';
 import HeaderText from './HeaderText';
 import MainContent from './MainContent';
+import OurClients from './OurClients';
+import FooterBar from './FooterBar';
 import Copyright from './Copyright';
 
 const LandingPage = () => {
@@ -15,7 +17,9 @@ const LandingPage = () => {
         <HomePageSlider />
         <HeaderText />
         <MainContent />
+        <OurClients />
       </div>
+      <FooterBar />
       <Copyright />
     </div>
   );

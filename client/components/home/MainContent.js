@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductBox from './ProductBox';
+import ProductBox from '../products/ProductBox';
 
 const MainContent = () => {
   return (

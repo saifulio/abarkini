@@ -8,6 +8,7 @@ import RestrictRoute from './RestrictRoute';
 import MainLayout from '../components/common/layout/MainLayout';
 import NotFound from '../components/error/NotFound';
 
+const AsyncLandingPage = loadable(() => import('../containers/home/LandingContainer'));
 const AsyncLoginForm = loadable(() => import('../containers/auth/LoginContainer'));
 const AsyncSignUpForm = loadable(() => import('../containers/auth/SignUpContainer'));
 const AsyncDashboard = loadable(() => import('../containers/dashboard/DashboardContainer'));
@@ -15,7 +16,8 @@ const AsyncDashboard = loadable(() => import('../containers/dashboard/DashboardC
 const Router = () => (
   <Fragment>
     <Switch>
-      <RestrictRoute exact path="/" component={AsyncLoginForm} />
+      <RestrictRoute exact path="/" component={AsyncLandingPage} />
+      <RestrictRoute exact path="/login" component={AsyncLoginForm} />
       <RestrictRoute exact path="/signup" component={AsyncSignUpForm} />
 
       <PrivateRoute exact path="/dashboard" layout={MainLayout} component={AsyncDashboard} />

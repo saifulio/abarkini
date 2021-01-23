@@ -3,6 +3,7 @@ import TopBar from './TopBar';
 import Navigation from './Navigation';
 import HomePageSlider from './HomePageSlider';
 import HeaderText from './HeaderText';
+import MainContent from './MainContent';
 import Copyright from './Copyright';
 
 const LandingPage = () => {
@@ -13,6 +14,7 @@ const LandingPage = () => {
         <Navigation />
         <HomePageSlider />
         <HeaderText />
+        <MainContent />
       </div>
       <Copyright />
     </div>

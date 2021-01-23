@@ -1,25 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ProductBox = () => {
+const ProductBox = (props) => {
+  const { classes, imgurl, title, category, price } = props;
+
   return (
     <li className="span3">
       <div className="product-box">
         <span className="sale_tag"></span>
         <p>
           <a href="product_detail.html">
-            <img src="img/ladies/1.jpg" alt="" />
+            <img src={imgurl} alt="" />
           </a>
         </p>
         <a href="product_detail.html" className="title">
-          Ut wisi enim ad
+          {title}
         </a>
         <br />
         <a href="products.html" className="category">
-          Commodo consequat
+          {category}
         </a>
-        <p className="price">$17.25</p>
+        <p className="price">{price}</p>
       </div>
     </li>
   );
 };
+
+ProductBox.propTypes = {
+  classes: PropTypes.object.isRequired,
+  imgurl: PropTypes.string,
+  title: PropTypes.any,
+  category: PropTypes.string,
+  price: PropTypes.string,
+};
+
 export default ProductBox;

@@ -18,9 +18,9 @@ const LandingPage = () => {
         <HeaderText />
         <MainContent />
         <OurClients />
+        <FooterBar />
+        <Copyright />
       </div>
-      <FooterBar />
-      <Copyright />
     </div>
   );
 };

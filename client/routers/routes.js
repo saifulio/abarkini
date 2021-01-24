@@ -30,7 +30,7 @@ const Router = () => (
       <RestrictRoute
         exact
         path="/products/:id"
-        layout={MainLayout}
+        layout={ProductsLayout}
         component={AsyncProductDetails}
       />
       <PrivateRoute exact path="/dashboard" layout={MainLayout} component={AsyncDashboard} />

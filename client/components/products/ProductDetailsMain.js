@@ -9,52 +9,52 @@ const ProductDetailsMain = () => {
           <div className="row">
             <div className="span4">
               <a
-                href="img/ladies/1.jpg"
+                href="/img/ladies/1.jpg"
                 className="thumbnail"
                 data-fancybox-group="group1"
                 title="Description 1"
               >
-                <img alt="" src="img/ladies/1.jpg" />
+                <img alt="" src="/img/ladies/1.jpg" />
               </a>
               <ul className="thumbnails small">
                 <li className="span1">
                   <a
-                    href="img/ladies/2.jpg"
+                    href="/img/ladies/2.jpg"
                     className="thumbnail"
                     data-fancybox-group="group1"
                     title="Description 2"
                   >
-                    <img src="img/ladies/2.jpg" alt="" />
+                    <img src="/img/ladies/2.jpg" alt="" />
                   </a>
                 </li>
                 <li className="span1">
                   <a
-                    href="img/ladies/3.jpg"
+                    href="/img/ladies/3.jpg"
                     className="thumbnail"
                     data-fancybox-group="group1"
                     title="Description 3"
                   >
-                    <img src="img/ladies/3.jpg" alt="" />
+                    <img src="/img/ladies/3.jpg" alt="" />
                   </a>
                 </li>
                 <li className="span1">
                   <a
-                    href="img/ladies/4.jpg"
+                    href="/img/ladies/4.jpg"
                     className="thumbnail"
                     data-fancybox-group="group1"
                     title="Description 4"
                   >
-                    <img src="img/ladies/4.jpg" alt="" />
+                    <img src="/img/ladies/4.jpg" alt="" />
                   </a>
                 </li>
                 <li className="span1">
                   <a
-                    href="img/ladies/5.jpg"
+                    href="/img/ladies/5.jpg"
                     className="thumbnail"
                     data-fancybox-group="group1"
                     title="Description 5"
                   >
-                    <img src="img/ladies/5.jpg" alt="" />
+                    <img src="/img/ladies/5.jpg" alt="" />
                   </a>
                 </li>
               </ul>
@@ -150,7 +150,7 @@ const ProductDetailsMain = () => {
                         <div className="product-box">
                           <span className="sale_tag"></span>
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/6.jpg" />
+                            <img alt="" src="/img/ladies/6.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html" className="title">
@@ -167,7 +167,7 @@ const ProductDetailsMain = () => {
                         <div className="product-box">
                           <span className="sale_tag"></span>
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/5.jpg" />
+                            <img alt="" src="/img/ladies/5.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html" className="title">
@@ -183,7 +183,7 @@ const ProductDetailsMain = () => {
                       <li className="span3">
                         <div className="product-box">
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/4.jpg" />
+                            <img alt="" src="/img/ladies/4.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html" className="title">
@@ -204,7 +204,7 @@ const ProductDetailsMain = () => {
                         <div className="product-box">
                           <span className="sale_tag"></span>
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/1.jpg" />
+                            <img alt="" src="/img/ladies/1.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html" className="title">
@@ -220,7 +220,7 @@ const ProductDetailsMain = () => {
                       <li className="span3">
                         <div className="product-box">
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/2.jpg" />
+                            <img alt="" src="/img/ladies/2.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html">Praesent tempor sem</a>
@@ -235,7 +235,7 @@ const ProductDetailsMain = () => {
                         <div className="product-box">
                           <span className="sale_tag"></span>
                           <a href="product_detail.html">
-                            <img alt="" src="img/ladies/3.jpg" />
+                            <img alt="" src="/img/ladies/3.jpg" />
                           </a>
                           <br />
                           <a href="product_detail.html" className="title">

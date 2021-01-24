@@ -6,10 +6,10 @@ const HomePageSlider = () => {
       <div className="flexslider">
         <ul className="slides">
           <li>
-            <img src="img/carousel/banner-1.jpg" alt="" />
+            <img src="/img/carousel/banner-1.jpg" alt="" />
           </li>
           <li>
-            <img src="img/carousel/banner-2.jpg" alt="" />
+            <img src="/img/carousel/banner-2.jpg" alt="" />
             <div className="intro">
               <h1>Mid season sale</h1>
               <p>

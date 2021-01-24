@@ -12,7 +12,7 @@ const ProductsPage = () => {
       <div id="wrapper" className="container">
         <Navigation />
         <section className="header_text">
-          <img className="pageBanner" src="img/pageBanner.png" alt="New products" />
+          <img className="pageBanner" src="/img/pageBanner.png" alt="New products" />
           <h4>
             <span>New products</span>
           </h4>

@@ -9,32 +9,32 @@ const OurClients = () => {
       <div className="row">
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/14.png" />
+            <img alt="" src="/img/clients/14.png" />
           </a>
         </div>
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/35.png" />
+            <img alt="" src="/img/clients/35.png" />
           </a>
         </div>
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/1.png" />
+            <img alt="" src="/img/clients/1.png" />
           </a>
         </div>
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/2.png" />
+            <img alt="" src="/img/clients/2.png" />
           </a>
         </div>
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/3.png" />
+            <img alt="" src="/img/clients/3.png" />
           </a>
         </div>
         <div className="span2">
           <a href="#">
-            <img alt="" src="img/clients/4.png" />
+            <img alt="" src="/img/clients/4.png" />
           </a>
         </div>
       </div>

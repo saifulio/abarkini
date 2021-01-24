@@ -16,6 +16,7 @@ const AsyncLoginForm = loadable(() => import('../containers/auth/LoginContainer'
 const AsyncSignUpForm = loadable(() => import('../containers/auth/SignUpContainer'));
 const AsyncDashboard = loadable(() => import('../containers/dashboard/DashboardContainer'));
 const AsyncProducts = loadable(() => import('../containers/products/ProductsContainer'));
+const AsyncContactUs = loadable(() => import('../containers/contact/ContactUsContainer'));
 const AsyncProductDetails = loadable(() =>
   import('../containers/products/ProductDetailsContainer')
 );
@@ -27,6 +28,7 @@ const Router = () => (
       <RestrictRoute exact path="/login" component={AsyncLoginForm} />
       <RestrictRoute exact path="/signup" component={AsyncSignUpForm} />
       <RestrictRoute exact path="/products" layout={ProductsLayout} component={AsyncProducts} />
+      <RestrictRoute exact path="/contact" layout={MainLayout} component={AsyncContactUs} />
       <RestrictRoute
         exact
         path="/products/:id"

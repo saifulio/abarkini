@@ -8,6 +8,7 @@ import PublicRoute from './PublicRoute';
 import RestrictRoute from './RestrictRoute';
 import MainLayout from '../components/common/layout/MainLayout';
 import ProductsLayout from '../components/common/layout/ProductsLayout';
+import ProductDetailsLayout from '../components/common/layout/ProductDetailsLayout';
 import NotFound from '../components/error/NotFound';
 
 const AsyncLandingPage = loadable(() => import('../containers/home/LandingContainer'));
@@ -15,6 +16,9 @@ const AsyncLoginForm = loadable(() => import('../containers/auth/LoginContainer'
 const AsyncSignUpForm = loadable(() => import('../containers/auth/SignUpContainer'));
 const AsyncDashboard = loadable(() => import('../containers/dashboard/DashboardContainer'));
 const AsyncProducts = loadable(() => import('../containers/products/ProductsContainer'));
+const AsyncProductDetails = loadable(() =>
+  import('../containers/products/ProductDetailsContainer')
+);
 
 const Router = () => (
   <Fragment>
@@ -23,6 +27,12 @@ const Router = () => (
       <RestrictRoute exact path="/login" component={AsyncLoginForm} />
       <RestrictRoute exact path="/signup" component={AsyncSignUpForm} />
       <RestrictRoute exact path="/products" layout={ProductsLayout} component={AsyncProducts} />
+      <RestrictRoute
+        exact
+        path="/products/:id"
+        layout={MainLayout}
+        component={AsyncProductDetails}
+      />
       <PrivateRoute exact path="/dashboard" layout={MainLayout} component={AsyncDashboard} />
 
       <Route component={NotFound} />

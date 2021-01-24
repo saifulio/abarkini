@@ -5,14 +5,20 @@ import HeaderText from '../common/header/HeaderText';
 import FooterBar from '../common/footer/FooterBar';
 import Copyright from '../common/footer/Copyright';
 
-const LandingPage = () => {
+const ProductsPage = () => {
+  console.log('Hello world');
   return (
     <div>
       <TopBar />
       <div id="wrapper" className="container">
         <Navigation />
-        <HeaderText />
-        <OurClients />
+        <HeaderText
+          innerText={[
+            <h4>
+              <span>New products</span>
+            </h4>,
+          ]}
+        />
         <FooterBar />
         <Copyright />
       </div>
@@ -20,4 +26,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default ProductsPage;

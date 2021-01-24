@@ -4,6 +4,7 @@ import loadable from '@loadable/component';
 
 // Import custom components
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import RestrictRoute from './RestrictRoute';
 import MainLayout from '../components/common/layout/MainLayout';
 import ProductsLayout from '../components/common/layout/ProductsLayout';
@@ -21,8 +22,8 @@ const Router = () => (
       <RestrictRoute exact path="/" component={AsyncLandingPage} />
       <RestrictRoute exact path="/login" component={AsyncLoginForm} />
       <RestrictRoute exact path="/signup" component={AsyncSignUpForm} />
+      <RestrictRoute exact path="/products" layout={ProductsLayout} component={AsyncProducts} />
       <PrivateRoute exact path="/dashboard" layout={MainLayout} component={AsyncDashboard} />
-      <PrivateRoute exact path="/products" layout={ProductsLayout} component={AsyncProducts} />
 
       <Route component={NotFound} />
     </Switch>

@@ -8,19 +8,19 @@ const FooterBar = () => {
           <h4>Navigation</h4>
           <ul className="nav">
             <li>
-              <a href="./index.html">Homepage</a>
+              <a href="/">Homepage</a>
             </li>
             <li>
-              <a href="./about.html">About Us</a>
+              <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="./contact.html">Contac Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
             <li>
-              <a href="./cart.html">Your Cart</a>
+              <a href="/cart">Your Cart</a>
             </li>
             <li>
-              <a href="./register.html">Login</a>
+              <a href="/register">Login</a>
             </li>
           </ul>
         </div>
@@ -43,7 +43,7 @@ const FooterBar = () => {
         </div>
         <div className="span5">
           <p className="logo">
-            <img src="img/logo.png" className="site_logo" alt="" />
+            <img src="/img/logo.png" className="site_logo" alt="" />
           </p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. the Lorem

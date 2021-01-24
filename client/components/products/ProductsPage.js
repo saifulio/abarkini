@@ -1,24 +1,22 @@
 import React from 'react';
 import TopBar from '../common/header/TopBar';
 import Navigation from '../common/header/Navigation';
-import HeaderText from '../common/header/HeaderText';
+import ProductGrid from './ProductGrid';
 import FooterBar from '../common/footer/FooterBar';
 import Copyright from '../common/footer/Copyright';
 
 const ProductsPage = () => {
-  console.log('Hello world');
   return (
     <div>
       <TopBar />
       <div id="wrapper" className="container">
         <Navigation />
-        <HeaderText
-          innerText={[
-            <h4>
-              <span>New products</span>
-            </h4>,
-          ]}
-        />
+        <section className="header_text">
+          <h4>
+            <span>New products</span>
+          </h4>
+        </section>
+        <ProductGrid />
         <FooterBar />
         <Copyright />
       </div>

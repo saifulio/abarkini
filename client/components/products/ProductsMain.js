@@ -1,5 +1,16 @@
 import React from 'react';
-import ProductBox from '../products/ProductBox';
+import ProductGrid from './ProductGrid';
 
-const ProductsMain = () => {};
+const ProductsMain = () => {
+  return (
+    <div id="wrapper" class="container">
+      <section class="main-content">
+        <div class="row">
+          <ProductGrid />
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export default ProductsMain;

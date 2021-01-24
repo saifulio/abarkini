@@ -27,7 +27,6 @@ const ProductBox = (props) => {
 };
 
 ProductBox.propTypes = {
-  classes: PropTypes.object.isRequired,
   imgurl: PropTypes.string,
   title: PropTypes.any,
   category: PropTypes.string,

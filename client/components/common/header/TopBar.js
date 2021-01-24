@@ -20,13 +20,13 @@ const TopBar = () => {
                 <a href="#">My Account</a>
               </li>
               <li>
-                <a href="cart.html">Your Cart</a>
+                <a href="/cart">Your Cart</a>
               </li>
               <li>
-                <a href="checkout.html">Checkout</a>
+                <a href="/checkout">Checkout</a>
               </li>
               <li>
-                <a href="register.html">Login</a>
+                <a href="/register">Login</a>
               </li>
             </ul>
           </div>

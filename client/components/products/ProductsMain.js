@@ -4,8 +4,8 @@ import BlockRight from './BlockRight';
 
 const ProductsMain = () => {
   return (
-    <section class="main-content">
-      <div class="row">
+    <section className="main-content">
+      <div className="row">
         <ProductGrid />
         <BlockRight />
       </div>

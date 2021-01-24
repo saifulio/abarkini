@@ -14,6 +14,7 @@ import NotFound from '../components/error/NotFound';
 const AsyncLandingPage = loadable(() => import('../containers/home/LandingContainer'));
 const AsyncLoginForm = loadable(() => import('../containers/auth/LoginContainer'));
 const AsyncSignUpForm = loadable(() => import('../containers/auth/SignUpContainer'));
+const AsyncRegisterForm = loadable(() => import('../containers/auth/RegisterContainer'));
 const AsyncDashboard = loadable(() => import('../containers/dashboard/DashboardContainer'));
 const AsyncProducts = loadable(() => import('../containers/products/ProductsContainer'));
 const AsyncCheckout = loadable(() => import('../containers/checkout/CheckoutContainer'));
@@ -29,6 +30,7 @@ const Router = () => (
       <RestrictRoute exact path="/" component={AsyncLandingPage} />
       <RestrictRoute exact path="/login" component={AsyncLoginForm} />
       <RestrictRoute exact path="/signup" component={AsyncSignUpForm} />
+      <RestrictRoute exact path="/register" layout={MainLayout} component={AsyncRegisterForm} />
       <RestrictRoute exact path="/products" layout={ProductsLayout} component={AsyncProducts} />
       <RestrictRoute exact path="/cart" layout={MainLayout} component={AsyncCart} />
       <RestrictRoute exact path="/checkout" layout={MainLayout} component={AsyncCheckout} />

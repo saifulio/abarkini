@@ -17,7 +17,7 @@ const TopBar = () => {
           <div className="account pull-right">
             <ul className="user-menu">
               <li>
-                <a href="#">My Account</a>
+                <a href="/">My Account</a>
               </li>
               <li>
                 <a href="/cart">Your Cart</a>

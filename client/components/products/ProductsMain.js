@@ -1,15 +1,15 @@
 import React from 'react';
 import ProductGrid from './ProductGrid';
+import BlockRight from './BlockRight';
 
 const ProductsMain = () => {
   return (
-    <div id="wrapper" class="container">
-      <section class="main-content">
-        <div class="row">
-          <ProductGrid />
-        </div>
-      </section>
-    </div>
+    <section class="main-content">
+      <div class="row">
+        <ProductGrid />
+        <BlockRight />
+      </div>
+    </section>
   );
 };
 

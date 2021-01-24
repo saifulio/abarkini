@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Pagination = () => {
-  // const { classes, imgurl, title, category, price } = props;
-
   return (
     <div className="pagination pagination-small pagination-centered">
       <ul>

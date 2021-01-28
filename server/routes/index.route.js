@@ -1,11 +1,11 @@
 import express from 'express';
-import authRoutes from './auth.route';
+import sessionRoutes from './session.route';
 import userRoutes from './user.route';
 
 const router = express.Router();
 
 // mount auth routes at /auth
-router.use('/auth', authRoutes);
+router.use('/session', sessionRoutes);
 
 // mount user routes at /users
 router.use('/users', userRoutes);

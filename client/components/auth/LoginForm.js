@@ -5,6 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 import { withStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardContent } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import { Redirect } from 'react-router-dom';
 
 // Import custom components
 import TopBar from '../common/header/TopBar';
@@ -40,85 +41,121 @@ const styles = {
   },
 };
 
-const LoginForm = (props) => {
-  const { handleSubmit, onSubmit, classes, errorMessage } = props;
+class LoginForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { email: '', password: '', redirect: false };
+  }
 
-  return (
-    <div>
-      <TopBar />
-      <div id="wrapper" className="container">
-        <Navigation />
-        <section className="header_text sub">
-          <img className="pageBanner" src="/img/pageBanner.png" alt="Login or Register" />
-          <h4>
-            <span>Login</span>
-          </h4>
-        </section>
-        <section className="main-content">
-          <div className="row">
-            <div className="span3"></div>
-            <div className="span6">
-              <h4 className="title">
-                <span className="text">
-                  <strong>Login</strong> Form
-                </span>
-              </h4>
-              <form method="post" onSubmit={handleSubmit(onSubmit)}>
-                <input type="hidden" name="next" value="/" />
-                <fieldset>
-                  <div className="control-group">
-                    <label className="control-label">Email</label>
-                    <div className="controls">
-                      <input
-                        type="text"
-                        placeholder="Enter your email"
-                        id="email"
-                        className="input-xlarge"
-                        name="email"
-                      />
+  submitHandler = (event) => {
+    event.preventDefault();
+    console.log(this.state.email, this.state.password);
+    fetch(`/api/v1/session`, {
+      method: 'POST',
+      body: JSON.stringify({ email: this.state.email, password: this.state.password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.error('Error:', err))
+      .then(() => this.setState({ redirect: true }));
+  };
+
+  emailChangeHandler = (event) => {
+    this.setState({ email: event.target.value });
+  };
+
+  passwordChangeHandler = (event) => {
+    this.setState({ password: event.target.value });
+  };
+
+  render() {
+    const { redirect } = this.state;
+    if (redirect) {
+      return <Redirect to="/" />;
+    }
+
+    return (
+      <div>
+        <TopBar />
+        <div id="wrapper" className="container">
+          <Navigation />
+          <section className="header_text sub">
+            <img className="pageBanner" src="/img/pageBanner.png" alt="Login or Register" />
+            <h4>
+              <span>Login</span>
+            </h4>
+          </section>
+          <section className="main-content">
+            <div className="row">
+              <div className="span3"></div>
+              <div className="span6">
+                <h4 className="title">
+                  <span className="text">
+                    <strong>Login</strong> Form
+                  </span>
+                </h4>
+                <form onSubmit={this.submitHandler}>
+                  <input type="hidden" name="next" value="/" />
+                  <fieldset>
+                    <div className="control-group">
+                      <label className="control-label">Email</label>
+                      <div className="controls">
+                        <input
+                          type="text"
+                          placeholder="Enter your email"
+                          id="email"
+                          className="input-xlarge"
+                          name="email"
+                          onChange={this.emailChangeHandler}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="control-group">
-                    <label className="control-label">Email</label>
-                    <div className="controls">
-                      <input
-                        type="password"
-                        placeholder="Enter your password"
-                        id="password"
-                        className="input-xlarge"
-                        name="password"
-                      />
+                    <div className="control-group">
+                      <label className="control-label">Email</label>
+                      <div className="controls">
+                        <input
+                          type="password"
+                          placeholder="Enter your password"
+                          id="password"
+                          className="input-xlarge"
+                          name="password"
+                          onChange={this.passwordChangeHandler}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="control-group">
-                    <input
-                      tabIndex="3"
-                      className="btn btn-inverse large"
-                      type="submit"
-                      value="Sign into your account"
-                    />
-                    <hr />
-                    <p className="reset">
-                      Recover your{' '}
-                      <a tabIndex="4" href="#" title="Recover your username or password">
-                        username or password
-                      </a>
-                    </p>
-                    <p>
-                      Don't have an account? <Link to={'/register'}>Create one</Link>.
-                    </p>
-                  </div>
-                </fieldset>
-              </form>
+                    <div className="control-group">
+                      <input
+                        tabIndex="3"
+                        className="btn btn-inverse large"
+                        type="submit"
+                        value="Sign into your account"
+                      />
+                      <hr />
+                      <p className="reset">
+                        Recover your{' '}
+                        <a tabIndex="4" href="#" title="Recover your username or password">
+                          username or password
+                        </a>
+                      </p>
+                      <p>
+                        Don't have an account? <Link to={'/register'}>Create one</Link>.
+                      </p>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
             </div>
-          </div>
-        </section>
-        <FooterBar />
-        <Copyright />
+          </section>
+          <FooterBar />
+          <Copyright />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 /*
 <div className={classes.root}>

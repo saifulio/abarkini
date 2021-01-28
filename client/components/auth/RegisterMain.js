@@ -10,7 +10,7 @@ class RegisterMain extends React.Component {
 
   submitHandler = (event) => {
     event.preventDefault();
-    console.log(this.state.email, this.state.password, this.state.password2);
+    console.log(this.state.email, this.state.password);
     fetch(`/api/v1/users`, {
       method: 'POST',
       body: JSON.stringify({ email: this.state.email, password: this.state.password }),
@@ -21,7 +21,7 @@ class RegisterMain extends React.Component {
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.error('Error:', err))
-      .then((data) => this.setState({ redirect: true }));
+      .then(() => this.setState({ redirect: true }));
   };
 
   emailChangeHandler = (event) => {

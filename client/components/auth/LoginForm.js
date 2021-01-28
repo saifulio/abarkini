@@ -58,7 +58,10 @@ class LoginForm extends React.Component {
       },
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem('token', data.token);
+      })
       .catch((err) => console.error('Error:', err))
       .then(() => this.setState({ redirect: true }));
   };

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 // import BlockRight from '../products/BlockRight';
 
 class RegisterMain extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: '', password: '', password2: '' };
+    this.state = { email: '', password: '', password2: '', redirect: false };
   }
 
   submitHandler = (event) => {
@@ -19,7 +20,8 @@ class RegisterMain extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => console.log(data))
-      .catch((err) => console.error('Error:', err));
+      .catch((err) => console.error('Error:', err))
+      .then((data) => this.setState({ redirect: true }));
   };
 
   emailChangeHandler = (event) => {
@@ -35,6 +37,10 @@ class RegisterMain extends React.Component {
   };
 
   render() {
+    const { redirect } = this.state;
+    if (redirect) {
+      return <Redirect to="/login" />;
+    }
     return (
       <section className="main-content">
         <div className="row">

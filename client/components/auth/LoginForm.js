@@ -105,7 +105,7 @@ const LoginForm = (props) => {
                       </a>
                     </p>
                     <p>
-                      Don't have an account? <Link to={'/signup'}>Create one</Link>.
+                      Don't have an account? <Link to={'/register'}>Create one</Link>.
                     </p>
                   </div>
                 </fieldset>

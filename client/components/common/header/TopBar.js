@@ -26,7 +26,7 @@ const TopBar = () => {
                 <a href="/checkout">Checkout</a>
               </li>
               <li>
-                <a href="/register">Login</a>
+                <a href="/login">Login</a>
               </li>
             </ul>
           </div>

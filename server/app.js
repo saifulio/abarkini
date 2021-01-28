@@ -28,7 +28,7 @@ app.get('/swagger.json', (req, res) => {
 app.use(requestLogger);
 
 // Router
-app.use('/api', routes);
+app.use('/api/v1', routes);
 
 // Landing page
 app.get('*', (req, res) => {

@@ -44,7 +44,7 @@ const styles = {
 };
 
 const RegisterForm = (props) => {
-  const { handleSubmit, onSubmit, classes } = props;
+  const { handleSubmit, onSubmit } = props;
 
   return (
     <div>
@@ -57,7 +57,7 @@ const RegisterForm = (props) => {
             <span>Register</span>
           </h4>
         </section>
-        <RegisterMain />
+        <RegisterMain handleSubmit={handleSubmit} onSubmit={onSubmit} />
         <FooterBar />
         <Copyright />
       </div>

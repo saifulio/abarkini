@@ -1,5 +1,5 @@
 {
-  "name": "express-mysql-react-redux",
+  "name": "abarkini",
   "version": "1.0.0",
   "description": "MySQL, Express, React/Redux Boilerplate Application",
   "scripts": {
@@ -50,7 +50,7 @@
     "http-status-codes": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
-    "knex": "^0.21.2",
+    "knex": "^0.21.15",
     "method-override": "^3.0.0",
     "morgan": "^1.9.1",
     "mysql": "^2.17.1",

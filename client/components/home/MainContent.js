@@ -108,24 +108,32 @@ const MainContent = () => {
                         title={'Ut wisi Enim Ad'}
                         category={'Commodo consequat'}
                         price={'$25.50'}
+                        id={1}
+                        categoryId={1}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware1.jpg'}
                         title={'Quis nostrud exerci tation'}
                         category={'Quis nostrud'}
                         price={'$17.55'}
+                        id={2}
+                        categoryId={1}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware6.jpg'}
                         title={'Know exactly turned'}
                         category={'Quis nostrud'}
                         price={'$25.30'}
+                        id={3}
+                        categoryId={1}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware5.jpg'}
                         title={'You think fast'}
                         category={'World once'}
                         price={'$25.60'}
+                        id={4}
+                        categoryId={1}
                       />
                     </ul>
                   </div>
@@ -136,24 +144,32 @@ const MainContent = () => {
                         title={'Know exactly'}
                         category={'Quis nostrud'}
                         price={'$45.50'}
+                        id={5}
+                        categoryId={2}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware3.jpg'}
                         title={'Ut wisi enim ad'}
                         category={'Commodo consequat'}
                         price={'$33.50'}
+                        id={6}
+                        categoryId={2}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware2.jpg'}
                         title={'You think water'}
                         category={'World once'}
                         price={'$45.30'}
+                        id={7}
+                        categoryId={2}
                       />
                       <ProductBox
                         imgurl={'/img/cloth/bootstrap-women-ware1.jpg'}
                         title={'Quis nostrud exerci'}
                         category={'Quis nostrud'}
                         price={'$25.20'}
+                        id={8}
+                        categoryId={2}
                       />
                     </ul>
                   </div>

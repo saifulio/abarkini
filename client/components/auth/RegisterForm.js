@@ -54,7 +54,7 @@ const RegisterForm = (props) => {
         <section className="header_text sub">
           <img className="pageBanner" src="/img/pageBanner.png" alt="Login or Register" />
           <h4>
-            <span>Login or Register</span>
+            <span>Register</span>
           </h4>
         </section>
         <RegisterMain />

@@ -15,13 +15,11 @@ const LandingPage = () => {
       <div id="wrapper" className="container">
         <Navigation />
         <HomePageSlider />
-        <HeaderText
-          innerText={[
-            'We stand for top quality templates. Our genuine developers always optimized bootstrap commercial templates.',
-            <br />,
-            "Don't miss to use our cheap abd best bootstrap templates.",
-          ]}
-        />
+        <section className="header_text">
+          We stand for top quality templates. Our genuine developers always optimized bootstrap
+          commercial templates.
+          <br />, Don't miss to use our cheap abd best bootstrap templates.,
+        </section>
         <MainContent />
         <OurClients />
         <FooterBar />

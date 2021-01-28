@@ -8,7 +8,6 @@ import PublicRoute from './PublicRoute';
 import RestrictRoute from './RestrictRoute';
 import MainLayout from '../components/common/layout/MainLayout';
 import ProductsLayout from '../components/common/layout/ProductsLayout';
-import ProductDetailsLayout from '../components/common/layout/ProductDetailsLayout';
 import NotFound from '../components/error/NotFound';
 
 const AsyncLandingPage = loadable(() => import('../containers/home/LandingContainer'));

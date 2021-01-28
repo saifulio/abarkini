@@ -7,8 +7,12 @@ import { Card, CardHeader, CardContent } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
 // Import custom components
-import renderText from '../common/form/renderText';
-import CustomizedSnackbar from '../common/snakebar/CustomizedSnackbar';
+import TopBar from '../common/header/TopBar';
+import Navigation from '../common/header/Navigation';
+import FooterBar from '../common/footer/FooterBar';
+import Copyright from '../common/footer/Copyright';
+// import renderText from '../common/form/renderText';
+// import CustomizedSnackbar from '../common/snakebar/CustomizedSnackbar';
 
 const styles = {
   root: {
@@ -40,7 +44,84 @@ const LoginForm = (props) => {
   const { handleSubmit, onSubmit, classes, errorMessage } = props;
 
   return (
-    <div className={classes.root}>
+    <div>
+      <TopBar />
+      <div id="wrapper" className="container">
+        <Navigation />
+        <section className="header_text sub">
+          <img className="pageBanner" src="/img/pageBanner.png" alt="Login or Register" />
+          <h4>
+            <span>Login</span>
+          </h4>
+        </section>
+        <section className="main-content">
+          <div className="row">
+            <div className="span3"></div>
+            <div className="span6">
+              <h4 className="title">
+                <span className="text">
+                  <strong>Login</strong> Form
+                </span>
+              </h4>
+              <form method="post" onSubmit={handleSubmit(onSubmit)}>
+                <input type="hidden" name="next" value="/" />
+                <fieldset>
+                  <div className="control-group">
+                    <label className="control-label">Email</label>
+                    <div className="controls">
+                      <input
+                        type="text"
+                        placeholder="Enter your email"
+                        id="email"
+                        className="input-xlarge"
+                        name="email"
+                      />
+                    </div>
+                  </div>
+                  <div className="control-group">
+                    <label className="control-label">Email</label>
+                    <div className="controls">
+                      <input
+                        type="password"
+                        placeholder="Enter your password"
+                        id="password"
+                        className="input-xlarge"
+                        name="password"
+                      />
+                    </div>
+                  </div>
+                  <div className="control-group">
+                    <input
+                      tabIndex="3"
+                      className="btn btn-inverse large"
+                      type="submit"
+                      value="Sign into your account"
+                    />
+                    <hr />
+                    <p className="reset">
+                      Recover your{' '}
+                      <a tabIndex="4" href="#" title="Recover your username or password">
+                        username or password
+                      </a>
+                    </p>
+                    <p>
+                      Don't have an account? <Link to={'/signup'}>Create one</Link>.
+                    </p>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </section>
+        <FooterBar />
+        <Copyright />
+      </div>
+    </div>
+  );
+};
+
+/*
+<div className={classes.root}>
       <Card className={classes.card}>
         <CardHeader className={classes.cardHeader} title="Login" />
         {errorMessage && (
@@ -64,9 +145,7 @@ const LoginForm = (props) => {
         </CardContent>
       </Card>
     </div>
-  );
-};
-
+*/
 const validateLogin = (values) => {
   const errors = {};
 

@@ -4,7 +4,7 @@ const OurClients = () => {
   return (
     <section className="our_client">
       <h4 className="title">
-        <span className="text">Manufactures</span>
+        <span className="text">Shops</span>
       </h4>
       <div className="row">
         <div className="span2">

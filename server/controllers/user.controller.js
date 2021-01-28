@@ -61,13 +61,8 @@ export function findById(req, res) {
  */
 export function store(req, res) {
     const {email} = req.body;
-    const salt = bcrypt.genSaltSync(10);
-    console.log(email, req.body.password);
-    console.log('salt: ' + salt);
+    const password = bcrypt.hashSync( req.body.password, 10);
     
-    const password = bcrypt.hashSync(req.body.password, salt);
-    console.log('password: '+password);
-    console.log('length: ', password.length);
     User.forge({
         email, password
     }).save()
